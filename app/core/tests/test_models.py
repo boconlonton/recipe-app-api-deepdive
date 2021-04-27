@@ -26,7 +26,7 @@ class ModelTests(TestCase):
     def test_new_user_invalid_email(self):
         """Test creating user with no email raises error"""
         with self.assertRaises(ValueError):
-            user = get_user_model().objects.create_user(
+            get_user_model().objects.create_user(
                 email=None,
                 password='test123'
             )
